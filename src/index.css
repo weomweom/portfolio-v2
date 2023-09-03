@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto+Mono:wght@300;400&display=swap');
+
+body {
+  background-color: #0c0020;
+  font-family: 'Montserrat', sans-serif;
+  color: #e5d2ff;
+}
+
+.mono {
+  font-family: 'Roboto Mono', monospace;
+}
+
+ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+ol li {
+  counter-increment: my-awesome-counter;
+  display: flex;
+  margin-right: 2rem;
+}
+ol li a::before {
+  content: "0" counter(my-awesome-counter) ".";
+  margin-right: 0.2rem;
+  color: #b78aff;
+}
+
+.App {
+  counter-reset: my-awesome-counter;
+}
+
+.title {
+  counter-increment: my-awesome-counter;
+}
+
+.title::before {
+  content: "0" counter(my-awesome-counter) ".";
+  margin-right: 0.2rem;
+  color: #b78aff;
+}
+
+.kitty {
+  cursor: url('img/maxwell-cat2.png') 25 26, pointer;
+}
+
+.animatedText {
+  animation: fadeIn .7s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.line-1{
+    width: 18rem;
+    border-right: 2px solid rgba(255,255,255,.75);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.anim-typewriter{
+  animation: typewriter steps(4) 1s 1 normal both,
+             blinkTextCursor 800ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 18rem;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
