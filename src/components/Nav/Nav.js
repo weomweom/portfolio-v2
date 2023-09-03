@@ -4,7 +4,7 @@ function Nav() {
         <div></div>
         <div className='flex items-center h-20'>
             <ol>
-                <li><a href='portfolio-v2/#about'>About</a></li>
+                <li><a href='/#about'>About</a></li>
                 <li><a href='portfolio-v2/#projects'>Projects</a></li>
                 <li><a href='portfolio-v2/#experience'>Experience</a></li>
                 <li><a href='portfolio-v2/#contact'>Contact</a></li>
