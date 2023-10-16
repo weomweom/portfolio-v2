@@ -1,0 +1,42 @@
+@tailwind components;
+@tailwind utilities;
+
+ol {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ol li {
+    counter-increment: my-awesome-counter;
+    display: flex;
+    @apply
+    md:mr-8
+}
+
+ol :nth-last-child(1) {
+    @apply
+    md:mr-0;
+}
+
+ol li a::before {
+    content: "0" counter(my-awesome-counter) ".";
+    margin-right: 0.2rem;
+    color: var(--counter-text);
+}
+
+@media screen and (max-width: 768px) {
+    .expanded, .closed {
+        transition: var(--navTransition);
+    }
+
+    .expanded{
+        transform: translateY(0);
+    }
+
+    .closed {
+        transform: translateY(-100vh);
+    }
+}
