@@ -4,32 +4,54 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto+Mono:wght@300;400&display=swap');
 
+:root {
+	--purple-text: #935ee7;
+	--counter-text: #b78aff;
+	--main-text-color: #e5d2ff;
+  --navHeight: 80px;
+  --navTransition: transform .5s;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 body {
   background-color: #0c0020;
   font-family: 'Montserrat', sans-serif;
-  color: #e5d2ff;
+  color: var(--main-text-color);
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+* {
+  scrollbar-color: #502782 rgba(166, 32, 255, 0.5);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #190036;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #502782;
+  border-radius: 10px;
+}
+
+::selection {
+  background: #580078; /* Цвет фона при выделении текста */
 }
 
 .mono {
   font-family: 'Roboto Mono', monospace;
 }
 
-ol {
-  list-style: none;
-  counter-reset: my-awesome-counter;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-ol li {
-  counter-increment: my-awesome-counter;
-  display: flex;
-  margin-right: 2rem;
-}
-ol li a::before {
-  content: "0" counter(my-awesome-counter) ".";
-  margin-right: 0.2rem;
-  color: #b78aff;
+section:nth-child(1){
+	padding-top: 0;
 }
 
 .App {
@@ -43,7 +65,7 @@ ol li a::before {
 .title::before {
   content: "0" counter(my-awesome-counter) ".";
   margin-right: 0.2rem;
-  color: #b78aff;
+  color: var(--counter-text);
 }
 
 .kitty {
@@ -54,22 +76,31 @@ ol li a::before {
   animation: fadeIn .7s;
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
 .line-1{
-    width: 18rem;
     border-right: 2px solid rgba(255,255,255,.75);
     overflow: hidden;
     white-space: nowrap;
 }
 
-.anim-typewriter{
-  animation: typewriter steps(4) 1s 1 normal both,
-             blinkTextCursor 800ms steps(44) infinite normal;
+.section {
+  padding: 100px 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
+
+.anim-typewriter{
+  animation: 
+    typewriter steps(4) 1s 1 normal both,
+    blinkTextCursor 800ms steps(44) infinite normal;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 @keyframes typewriter{
   from{width: 0;}
   to{width: 18rem;}

@@ -1,37 +1,27 @@
 //components
 import Nav from './components/Nav/Nav';
-import Home from './components/Home/Home';
-import About from './components/About/About';
-import Projects from './components/Projects/Projects';
-import Experience from './components/Experience/Experience';
-import Title from './helpers/Title';
+import Home from './components/Home';
+import About from './components/About';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Contact from './components/Contact';
 
 //styles
-import './App.css';
+import './index.css';
 
 function App() {
   return (
-    <div className="App flex justify-center">
+    <div className="App">
       <Nav/>
-      <div className='w-[1000px]'>
-        <section>
-          <Home/>
-        </section>
-        <section id='about' className='pt-32'>
-          <Title text='About'/>
-          <About/>
-        </section>
-        <section id='projects' className='pt-32'>
+      <div className='max-w-[1000px] my-0 mx-auto'>
+        <Home/>
+        <About/>
+        {/*<Section id='projects'>
           <Title text='Projects'/>
           <Projects/>
-        </section>
-        <section id='experience'>
-          <Title text='Experience'/>
-          <Experience/>
-        </section>
-        <section id='contacts'>
-          <Title text='Contacts'/>
-        </section>
+        </Section>*/}
+        <Experience/>
+        <Contact/>
       </div>
     </div>
   );

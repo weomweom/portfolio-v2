@@ -27,6 +27,41 @@ ol li a::before {
     color: var(--counter-text);
 }
 
+a {
+    transition: .2s ease-in-out transform;
+}
+
+a:hover {
+    transform: translateY(-2px);
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .line {
+    width: 30px;
+    height: 3px;
+    background-color: var(--main-text-color);
+    margin: 4px 0;
+    transition: 0.4s;
+    border-radius: 10px;
+  }
+  
+  .active1 {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+  
+  .active2 {
+    opacity: 0;
+  }
+  
+  .active3 {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+  
 @media screen and (max-width: 768px) {
     .expanded, .closed {
         transition: var(--navTransition);
