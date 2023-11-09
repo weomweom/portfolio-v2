@@ -5,8 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto+Mono:wght@300;400&display=swap');
 
 :root {
-	--purple-text: #935ee7;
-	--counter-text: #b78aff;
+  --dark-purple: #190036;
+	--purple: #935ee7;
+  --projectBg: #8561be;
+	--light-purple: #b78aff;
 	--main-text-color: #e5d2ff;
   --navHeight: 80px;
   --navTransition: transform .5s;
@@ -43,7 +45,7 @@ body {
 }
 
 ::selection {
-  background: #580078; /* Цвет фона при выделении текста */
+  background: #580078;
 }
 
 .mono {
@@ -65,7 +67,7 @@ section:nth-child(1){
 .title::before {
   content: "0" counter(my-awesome-counter) ".";
   margin-right: 0.2rem;
-  color: var(--counter-text);
+  color: var(--light-purple);
 }
 
 .kitty {

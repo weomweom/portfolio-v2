@@ -1,9 +1,21 @@
+//components
+import Title from "./Title";
+import ProjectCard from './ProjectCard';
+
+//data
+import { projectsData } from '../config.js'
+
 function Projects() {
     return (
-        <div className="flex flex-col items-center">
-            <div className="flex justify-between items-center  w-full px-20 text-lg">
-                
-            </div>
+        <div className="section" id='projects'>
+            <Title text='Projects'/>
+            {projectsData && 
+                <div className="flex flex-wrap justify-center">
+                    {projectsData.map((projectData, i) => (
+                        <ProjectCard data={projectData} key={i}/>
+                    ))}
+                </div>
+            }
         </div>
     );
 }

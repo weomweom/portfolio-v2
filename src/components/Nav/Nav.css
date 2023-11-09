@@ -24,7 +24,7 @@ ol :nth-last-child(1) {
 ol li a::before {
     content: "0" counter(my-awesome-counter) ".";
     margin-right: 0.2rem;
-    color: var(--counter-text);
+    color: var(--light-purple);
 }
 
 a {

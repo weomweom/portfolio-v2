@@ -1,5 +1,10 @@
+//hooks
 import { useState, useEffect } from 'react';
+
+//data
 import { navLinks } from '../../config.js';
+
+//styles
 import './Nav.css';
 
 function NavSideBar() {
@@ -27,7 +32,7 @@ function NavSideBar() {
 
   return (
     <div className='w-full mono flex flex-col items-cetner fixed z-10 md:hidden'>
-        <div className='h-[var(--navHeight)] w-full flex justify-end items-center bg-[#190036] px-8 z-[2]'>
+        <div className='h-[--navHeight] w-full flex justify-end items-center bg-[--dark-purple] px-8 z-[2]'>
           <button onClick={() => toggleMenu()}>
             <div className="hamburger">
               {hamburger.map((item, index) => (
@@ -36,7 +41,7 @@ function NavSideBar() {
             </div>
           </button>
         </div>
-        <div className={`${isMenuOpen ? 'expanded' : 'closed'} h-[calc(100dvh-var(--navHeight))] bg-[#190036]`}>
+        <div className={`${isMenuOpen ? 'expanded' : 'closed'} h-[calc(100dvh-var(--navHeight))] bg-[--dark-purple]`}>
             <ol className='flex flex-col h-full items-center justify-center'>
                 {navLinks.map((item, i) => {
                 return(
