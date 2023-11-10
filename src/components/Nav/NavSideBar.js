@@ -31,7 +31,7 @@ function NavSideBar() {
   const hamburger = Array(3).fill(null);
 
   return (
-    <div className='w-full mono flex flex-col items-cetner fixed z-10 md:hidden'>
+    <div className={`w-full mono flex flex-col items-cetner sticky top-0 md:hidden`}>
         <div className='h-[--navHeight] w-full flex justify-end items-center bg-[--dark-purple] px-8 z-[2]'>
           <button onClick={() => toggleMenu()}>
             <div className="hamburger">
@@ -41,7 +41,7 @@ function NavSideBar() {
             </div>
           </button>
         </div>
-        <div className={`${isMenuOpen ? 'expanded' : 'closed'} h-[calc(100dvh-var(--navHeight))] bg-[--dark-purple]`}>
+        <div className={`${isMenuOpen ? 'expanded' : 'closed'} w-full h-[calc(100dvh-var(--navHeight))] bg-[--dark-purple]`}>
             <ol className='flex flex-col h-full items-center justify-center'>
                 {navLinks.map((item, i) => {
                 return(

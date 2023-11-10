@@ -1,9 +1,9 @@
 //components
-import Title from "./Title";
-import ProjectCard from './ProjectCard';
+import Title from "../Title";
+import ProjectCard from '../ProjectCard';
 
 //data
-import { projectsData } from '../config.js'
+import { projectsData } from '../../config.js'
 
 function Projects() {
     return (

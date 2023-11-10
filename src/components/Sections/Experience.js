@@ -1,8 +1,8 @@
 //components
-import Title from './Title';
+import Title from '../Title';
 
 //data
-import { experienceData } from '../config';
+import { experienceData } from '../../config';
 
 function Experience() {
     return (

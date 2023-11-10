@@ -65,10 +65,11 @@ a:hover {
 @media screen and (max-width: 768px) {
     .expanded, .closed {
         transition: var(--navTransition);
+        position: fixed;
     }
 
     .expanded{
-        transform: translateY(0);
+        transform: translateY(var(--navHeight));
     }
 
     .closed {

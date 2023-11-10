@@ -1,6 +1,6 @@
 //components
-import Icon from './Icons/Icons';
-import Title from './Title';
+import Icon from '../Icons/Icons';
+import Title from '../Title';
 
 function Contact() {
     return (

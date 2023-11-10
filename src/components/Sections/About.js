@@ -1,8 +1,8 @@
 //components
-import Title from './Title';
+import Title from '../Title';
 
 //images
-import me from '../img/me.png';
+import me from '../../img/me.png';
 
 function Home() {
     return (
