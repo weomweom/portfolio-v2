@@ -15,33 +15,28 @@
 }
 
 html {
+  scrollbar-width: thin;
 	scroll-behavior: smooth;
+  scrollbar-color: #502782 var(--dark-purple);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #190036;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #502782;
+  border-radius: 10px;
 }
 
 body {
   background-color: #0c0020;
   font-family: 'Montserrat', sans-serif;
   color: var(--main-text-color);
-}
-
-/* ===== Scrollbar CSS ===== */
-  /* Firefox */
-* {
-  scrollbar-color: #502782 rgba(166, 32, 255, 0.5);
-}
-
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 6px;
-}
-
-*::-webkit-scrollbar-track {
-  background: #190036;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #502782;
-  border-radius: 10px;
 }
 
 ::selection {
@@ -89,25 +84,20 @@ body {
 }
 
 .section:nth-child(1){
-	padding-top: 20px;
+	padding-top: 0;
 }
 
-.anim-typewriter{
-  animation: 
-    typewriter steps(4) 1s 1 normal both,
-    blinkTextCursor 800ms steps(44) infinite normal;
+.animated{
+  opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Adjust properties and duration as needed */
 }
+
+.active{
+  opacity: 1;
+}
+
 
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
-}
-
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 18rem;}
-}
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
 }

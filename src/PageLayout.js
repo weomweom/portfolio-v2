@@ -15,13 +15,13 @@ function PageLayout() {
     <div>
       <Nav/>
       <div className='max-w-[1000px] my-0 mx-auto'>
-        {/*<Home/>*/}
+        <Home/>
         <About/>
         <Projects/>
         <Experience/>
         <Contact/>
       </div>
-      <Note/>
+      {/*<Note/>*/}
     </div>
   );
 }

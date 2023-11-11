@@ -1,6 +1,9 @@
 //hooks
 import { useState, useEffect } from 'react';
 
+//img
+import logo from '../../img/logo.png';
+
 //data
 import { navLinks } from '../../config.js';
 
@@ -32,7 +35,10 @@ function NavSideBar() {
 
   return (
     <div className={`w-full mono flex flex-col items-cetner sticky top-0 md:hidden`}>
-        <div className='h-[--navHeight] w-full flex justify-end items-center bg-[--dark-purple] px-8 z-[2]'>
+        <div className='h-[--navHeight] w-full flex justify-between bg-[--dark-purple] px-8 z-[2]'>
+          <div className='lg:ml-10 self-center'>
+            <a href='./#'><img className='h-[calc(var(--navHeight)-30px)]' src={logo}/></a>
+          </div>
           <button onClick={() => toggleMenu()}>
             <div className="hamburger">
               {hamburger.map((item, index) => (
