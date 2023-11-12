@@ -42,8 +42,7 @@ function Home() {
         };
     }, []);
     return (
-        <div className='section h-[calc(100vh-var(--navHeight))]' id='home'>
-
+        <div className='section h-[calc(100vh-var(--navHeight)-100px)]' id='home'>
             {showBlocks && (
                 <div className="flex flex-col justify-center h-full z-[-1] px-1 sm:px-10">
                     <AnimatedBlock delay={0}>

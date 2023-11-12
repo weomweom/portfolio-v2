@@ -1,7 +1,7 @@
 module.exports = {
     navLinks: [
         {
-            name: 'About',
+            name: 'About me',
             link: './#about'
         },
         {

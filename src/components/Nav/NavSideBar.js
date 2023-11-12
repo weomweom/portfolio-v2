@@ -29,6 +29,9 @@ function NavSideBar() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    if(!isMenuOpen)
+      document.body.classList.add('overflow-hidden');
+    else document.body.classList.remove('overflow-hidden');
   }
 
   const hamburger = Array(3).fill(null);
@@ -47,7 +50,7 @@ function NavSideBar() {
             </div>
           </button>
         </div>
-        <div className={`${isMenuOpen ? 'expanded' : 'closed'} w-full h-[calc(100dvh-var(--navHeight))] bg-[--dark-purple]`}>
+        <div className={`${isMenuOpen ? 'expanded' : 'closed'} w-full overflow-hidden h-[calc(100vh-var(--navHeight))] bg-[--dark-purple]`}>
             <ol className='flex flex-col h-full items-center justify-center'>
                 {navLinks.map((item, i) => {
                 return(

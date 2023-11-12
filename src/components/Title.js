@@ -1,9 +1,9 @@
 function Title({text}) {
     return (
         <div className="w-full h-min px-2.5 flex items-center title mono text-xl mb-16">
-            <div className="mr-6">
+            <h2 className="mr-6 whitespace-nowrap">
                 {text}
-            </div>
+            </h2>
             <span className="w-full h-[.5px] bg-[#fff]"></span>
         </div>
     );
