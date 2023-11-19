@@ -4,7 +4,7 @@ import ExternalLink from './Icons/ExternalLink';
 
 function ProjectCard({data}) {
     return (
-        <div className="flex flex-col w-[290px] bg-[--projectBg] rounded-lg p-5 m-2">
+        <div className="flex flex-col w-[290px] bg-[--projectBg] rounded-lg p-5">
             <div className="flex justify-between">
                 <h6 className='uppercase font-bold mono'>{data.name}</h6>
                 <div className="flex">

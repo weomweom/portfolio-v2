@@ -48,5 +48,13 @@ module.exports = {
             link: '',
             technologies: ["JS", "Sass", "HTML", "RWD"],
         },
+        {
+            name: '🚧 Recipe Manager',
+            description: 'Fullstack recipe manager app where you can add your own recipes to personal collection, then create menus and generate a shopping list',
+            githubRepo: 'https://github.com/weomweom/recipe-manager',
+            link: '',
+            technologies: ["Next.js", "Tailwind", "Prisma"]
+
+        }
     ]
 }
