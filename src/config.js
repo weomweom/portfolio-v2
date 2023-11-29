@@ -22,7 +22,7 @@ module.exports = {
             date: "aug 2023 - oct 2023",
             position: "Junior Frontend developer",
             firm: "Neo-Vinci",
-            description: "Responsibility for the development of applications in React, bug fixing, collaboration with backend, UX, an UI teams, responsibility for coding presentations and web pages, programming in a TypeScript environment",
+            description: "Responsibility for the development of applications in React, bug fixing, collaboration with backend, UX, an UI teams, responsibility for coding presentations and web pages, programming in a TypeScript environment.",
             technologies: ["React", "JavaScript", "Tailwind", "Postman", "TypeScript", "HTML", "CSS"]
         },
     ],
@@ -53,8 +53,8 @@ module.exports = {
             description: 'Fullstack recipe manager app where you can add your own recipes to personal collection, then create menus and generate a shopping list',
             githubRepo: 'https://github.com/weomweom/recipe-manager',
             link: '',
-            technologies: ["Next.js", "Tailwind", "Prisma"]
+            technologies: ["Next.js", "TypeScript", "Prisma"]
 
-        }
+        },
     ]
 }
