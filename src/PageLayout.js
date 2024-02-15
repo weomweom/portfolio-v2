@@ -8,7 +8,6 @@ import Contact from './components/Sections/Contact';
 
 //styles
 import './index.css';
-import Note from './components/Note';
 
 function PageLayout() {
   return (

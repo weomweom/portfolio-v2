@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto+Mono:wght@300;400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto+Mono:wght@300;400&display=swap');
 
 :root {
   --dark-purple: #190036;
@@ -12,12 +12,6 @@
 	--main-text-color: #e5d2ff;
   --navHeight: 80px;
   --navTransition: transform .5s;
-}
-
-html {
-  scrollbar-width: thin;
-	scroll-behavior: smooth;
-  scrollbar-color: #502782 var(--dark-purple);
 }
 
 ::-webkit-scrollbar {
@@ -33,14 +27,18 @@ html {
   border-radius: 10px;
 }
 
+::selection {
+  background: #580078;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 body {
   background-color: #0c0020;
   font-family: 'Montserrat', sans-serif;
   color: var(--main-text-color);
-}
-
-::selection {
-  background: #580078;
 }
 
 .mono {
