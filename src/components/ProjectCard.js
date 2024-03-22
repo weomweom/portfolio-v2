@@ -1,17 +1,7 @@
-//components
-import GitHubIcon from './Icons/GitHubIcon';
-import ExternalLink from './Icons/ExternalLink';
-
 function ProjectCard({data}) {
     return (
-        <div className="flex flex-col w-[290px] bg-[--projectBg] rounded-lg p-5 transition hover:scale-105">
-            <div className="flex justify-between">
-                <h6 className='uppercase font-bold mono'>{data.name}</h6>
-                <div className="flex">
-                    {data.githubRepo && <a href={data.githubRepo} target='_blank' rel="noreferrer"><GitHubIcon/></a>}
-                    {data.link && <a href={data.link} className='pl-1' target='_blank' rel="noreferrer"><ExternalLink/></a>}
-                </div>
-            </div>
+        <a target="_blank" rel="noreferrer" href={data.link ? data.link : data.githubRepo} className="flex flex-col w-[290px] bg-[--projectBg] rounded-lg p-5 transition hover:scale-105">
+            <h6 className='uppercase font-bold mono'>{data.name}</h6>
             {data.technologies && 
                 <ul className="flex flex-wrap mono py-2">
                         {data.technologies.map((tech, index) => {
@@ -22,7 +12,7 @@ function ProjectCard({data}) {
                 </ul>
             }
             <p className='text-sm text-[--dark-purple]'>{data.description}</p>
-        </div>
+        </a>
     );
 }
 

@@ -49,11 +49,11 @@ module.exports = {
             technologies: ["JS", "Sass", "HTML", "RWD"],
         },
         {
-            name: '🚧 Cobalt',
-            description: "Aesthetic website I'm currently working on using Tailwind. In the near future, I plan to complete the styling of this page and add animations",
+            name: 'Cobalt landing page',
+            description: "Visually captivating website that stands out with its stunning aesthetics and attention to detail, creating a memorable browsing experience for visitors",
             githubRepo: 'https://github.com/weomweom/cobalt-landing-page',
             link: 'https://weomweom.github.io/cobalt-landing-page/',
-            technologies: ["React", "Tailwind", "Tailwind"]
+            technologies: ["React", "Tailwind"]
         },
         {
             name: '🚧 Admin panel',
