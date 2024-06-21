@@ -99,3 +99,8 @@ body {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
+.cursor {
+	background: radial-gradient(450px at 330px, rgba(189, 72, 228, 0.2), transparent 80%);
+	@apply left-0 top-0 w-[670px] h-[670px] pointer-events-none select-none z-[-1]
+}

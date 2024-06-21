@@ -4,9 +4,9 @@ import Title from '../Title';
 
 function Contact() {
     return (
-        <div className="section mb-12" id='contact'>
-            <Title text='Contact'/>
-            <section className='flex flex-col items-center'>
+        <div className="section h-[100dvh]" id='contact'>
+            <Title text='Contact' isMarginBottom={false}/>
+            <section className='flex flex-col items-center justify-center h-full'>
                 <p className="text-[38px] font-semibold text-[--purple] text-center mb-5">Did you like my portfolio?</p>
                 <p className='text-lg text-center mb-10'>I'm also open to getting in touch or<br/> hearing  about exciting opportunities.<br/>Feel free to let me know here:</p>
                 <a className='flex border-2 border-[--purple] rounded  text-xl mono px-10 py-5 mb-10 transition hover:bg-[--main-text-color] hover:text-[--purple] hover:border-[--main-text-color]' href={Icon[4].link}>Write to me</a>
